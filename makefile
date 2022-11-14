@@ -1,3 +1,16 @@
+## Setup the venv
+.PHONY: venv
+venv:
+	python -m venv venv
+	python -m venv dev_venv
+## Install your dependencies
+.PHONY: install
+install:
+	python -m pip install --upgrade pip
+	python -m pip install pip-tools
+	pip-compile --output-file requirements.txt requirements.in requirements_dev.in
+	python -m  pip install coverage
+	python -m pip install -r requirements.txt
 ## Run all pre-commit hooks
 .PHONY: precommit
 precommit:
@@ -16,7 +29,7 @@ test:
 .PHONY: black
 black:
 	python -m black --version
-	python -m black .
+	python -m black *.py
 ## Run ci part
 .PHONY: ci
 ci: precommit tests
