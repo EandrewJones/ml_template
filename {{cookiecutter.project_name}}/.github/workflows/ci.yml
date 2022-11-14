@@ -18,10 +18,10 @@ jobs:
         python-version: ["3.10"]
     steps:
     - uses: actions/checkout@v3
-    - name: Set up Python {{coookiecutter.python_major_version}}.{{cookiecutter.python_minor_version}}
+    - name: Set up Python {{cookiecutter.python_major_version}}.{{cookiecutter.python_minor_version}}
       uses: actions/setup-python@v3
       with:
-        python-version: {{coookiecutter.python_major_version}}.{{cookiecutter.python_minor_version}}
+        python-version: {{cookiecutter.python_major_version}}.{{cookiecutter.python_minor_version}}
 
     - name: Install dependencies
       run: |
