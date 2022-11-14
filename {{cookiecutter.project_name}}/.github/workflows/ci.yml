@@ -18,10 +18,10 @@ jobs:
         python-version: ["3.10"]
     steps:
     - uses: actions/checkout@v3
-    - name: Set up Python ${{ matrix.python-version }}
+    - name: Set up Python {{coookiecutter.python_major_version}}.{{cookiecutter.python_minor_version}}
       uses: actions/setup-python@v3
       with:
-        python-version: ${{ matrix.python-version }}
+        python-version: {{coookiecutter.python_major_version}}.{{cookiecutter.python_minor_version}}
 
     - name: Install dependencies
       run: |
@@ -38,27 +38,3 @@ jobs:
     - name: Run tests with pytest
       run: |
         coverage run -m pytest
-
-    - name: Coverage Badge
-      uses: tj-actions/coverage-badge-py@v1.8
-
-    - name: Verify Changed files
-      uses: tj-actions/verify-changed-files@v9
-      id: changed_files
-      with:
-        files: coverage.svg
-
-    - name: Commit files
-      if: steps.changed_files.outputs.files_changed == 'true'
-      run: |
-        git config --local user.email "github-actions[bot]@users.noreply.github.com"
-        git config --local user.name "github-actions[bot]"
-        git add coverage.svg
-        git commit -m "Updated coverage.svg"
-
-    - name: Push changes
-      if: steps.changed_files.outputs.files_changed == 'true'
-      uses: ad-m/github-push-action@master
-      with:
-        github_token: ${{ secrets.github_token }}
-        branch: ${{ github.ref }}
