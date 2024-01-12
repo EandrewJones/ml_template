@@ -23,13 +23,14 @@
 
 ```
 Project_folder/
-|- bin/          # contains scripts and main files that should be run
-|- config/       # config files
-|- notebooks/    # notebooks for EDA and exploration
-|- secrets       # contains api keys and secret parameters. It should be ignored from git
-|- src/          # source code - contains functions
-|- tests/        # Test files should mirror the src folder
-|- Makefile      # automatize taks through make utility
+|- bin/          # Contains entrypoints for the docker container
+|- config/       # Config files
+|- notebooks/    # notebooks for EDA, exploration, and model training
+|- secrets       # Contains api keys and secret parameters. It should be ignored from git
+|- src/          # Source code - contains FastAPI app and any other source code for the models
+|- tests/        # Test files 
+|- weights/      # Contains model weights
+|- Makefile      # Automate tasks through make utility
 ```
 
 ## 🏁 Getting Started <a name = "getting_started"></a>
