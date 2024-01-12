@@ -9,7 +9,7 @@ cd
 
 pip install cookiecutter
 
-cookiecutter git@github.com:EandrewJones/ml_template.git --checkout cookiecutter
+cookiecutter git@github.com:EandrewJones/ml_template.git --checkout main
 ```
 
 You can follow the instructions to generate your git project.
