@@ -56,9 +56,11 @@ jobs:
         git add coverage.svg
         git commit -m "Updated coverage.svg"
 
+    #{% raw %}
     - name: Push changes
       if: steps.changed_files.outputs.files_changed == 'true'
       uses: ad-m/github-push-action@master
       with:
         github_token: ${{ secrets.github_token }}
         branch: ${{ github.ref }}
+    #{% endraw %}
