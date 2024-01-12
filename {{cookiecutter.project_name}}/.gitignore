@@ -4,6 +4,7 @@ data/*
 secrets/*
 key/*
 fig/*
+.venv
 .vscode/**
 **/venv
 **/__pycache__

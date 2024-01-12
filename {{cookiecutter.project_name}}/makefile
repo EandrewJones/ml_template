@@ -1,16 +1,24 @@
 ## Setup the venv
-.PHONY: venv install precommit lint tests black ci
-venv:
-	python -m venv venv
-	python -m venv dev_venv
+.PHONY: mamba create_env update_env dev setup_precommit precommit lint test format ci
 
-## Install your dependencies
-install:
+mamba:
+	/bin/bash ./scripts/install_mamba.sh
+
+create_env:
+	/bin/bash ./scripts/create_env.sh
+
+update_env:
+	/bin/bash ./scripts/update_env.sh
+
+## Install dev dependencies
+## Make sure this is after you have activated the conda environment
+dev:
 	python -m pip install --upgrade pip
-	python -m pip install pip-tools
-	pip-compile --output-file requirements.txt requirements.in requirements_dev.in
-	python -m  pip install coverage
-	python -m pip install -r requirements.txt
+	python -m pip install -r requirements_dev.txt
+
+## Install precommit hooks
+setup_precommit:
+	pre-commit install
 
 ## Run all pre-commit hooks
 precommit:
@@ -27,7 +35,7 @@ test:
 	python -m pytest tests
 
 ## Format your code using black
-black:
+format:
 	python -m black --version
 	python -m black *.py
 

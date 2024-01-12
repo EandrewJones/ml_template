@@ -1,6 +1,0 @@
-# required packages for the run
-# NOTE: Pin these to a specific version for reproducibility
-uvicorn
-fastapi
-pydantic
-torch

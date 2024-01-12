@@ -1,0 +1,16 @@
+name: {{ cookiecutter.project_name }}
+channels:
+  - conda-forge
+  - defaults
+  - pytorch
+  - nvidia
+dependencies:
+  # Specify the python version first
+  - python={{cookiecutter.python_major_version}}.{{cookiecutter.python_minor_version}}
+  # Python dependencies below
+  # NOTE: PIN versions after instantiating the template
+  - fastapi
+  - pydantic
+  - pytorch
+  - pytorch-cuda=11.8
+  - uvicorn-standard
