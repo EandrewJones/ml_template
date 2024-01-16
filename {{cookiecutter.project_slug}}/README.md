@@ -56,7 +56,7 @@ The project utilizes a `Makefile`` to simplify routine tasks. The first time you
 
 ```bash
 make create_env
-mamba activate {{ cookiecutter.environment_name }}
+mamba activate {{ cookiecutter.project_slug }}
 ```
 
 ---
