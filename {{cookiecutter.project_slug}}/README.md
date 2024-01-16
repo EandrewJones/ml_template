@@ -38,7 +38,7 @@ Project_folder/
 ### Clone the project
 
 ```bash
-$ git clone {{cookiecutter.gitlab_repo_url}}
+$ git clone {{cookiecutter.git_repo_url}}
 ```
 
 ### Prerequisites
@@ -56,7 +56,7 @@ The project utilizes a `Makefile`` to simplify routine tasks. The first time you
 
 ```bash
 make create_env
-mamba activate {{cookiecutter.project_name}}
+mamba activate {{ cookiecutter.environment_name }}
 ```
 
 ---
@@ -89,7 +89,7 @@ make update_env
 If you need to update the **development** dependencies, you must change the `requirements_dev.txt` file. Once you've updated the file, you can update the environment with the following command:
 
 ```bash
-make
+make dev
 ```
 
 
