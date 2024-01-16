@@ -9,8 +9,9 @@ mock the model responses with a fixture and just test the API business
 logic to minimize resource usage.
 """
 from fastapi.testclient import TestClient
-from src.schema import ModelPayload
+
 from src.main import app  # Assuming your main FastAPI app file is named 'main'
+from src.schema import ModelPayload
 
 client = TestClient(app)
 

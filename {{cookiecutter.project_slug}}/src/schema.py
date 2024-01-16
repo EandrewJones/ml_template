@@ -7,5 +7,3 @@ class ModelPayload(BaseModel):
     Add fields as needed following the pydantic docs:
         https://docs.pydantic.dev/latest/concepts/models/
     """
-
-    pass

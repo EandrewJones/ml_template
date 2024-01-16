@@ -1,9 +1,9 @@
 import torch
 import uvicorn
-
 from fastapi import FastAPI
-from src.schema import ModelPayload
+
 from config.config import cfg
+from src.schema import ModelPayload
 
 #
 # Instantiate the FastAPI app

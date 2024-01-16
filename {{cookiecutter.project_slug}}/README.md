@@ -62,7 +62,7 @@ mamba activate {{ cookiecutter.environment_name }}
 ---
 **NOTE**
 
-The script that creates the env is NOT idempotent. If you run it a second time, it will not overwrite the existing environment. If you need to update the environment because the dependencies have changed, there is a separate command for that. 
+The script that creates the env is NOT idempotent. If you run it a second time, it will not overwrite the existing environment. If you need to update the environment because the dependencies have changed, there is a separate command for that.
 
 ---
 
@@ -73,7 +73,7 @@ make dev
 ```
 
 This project uses pre-commit hooks to ensure that the code is formatted correctly and that the tests pass before committing. To install the pre-commit hooks, run the following command:
-    
+
 ```bash
 make setup_precommit
 ```
@@ -81,7 +81,7 @@ make setup_precommit
 ### Updating Dependencies
 
 If you make changes to **production** dependencies, you need to manually update the `environment.yml`. We *encourage pinning versions of dependencies whenever possible* to increase reproducibility. Once you've updated the file, you can update the environment with the following command:
- 
+
 ```bash
 make update_env
 ```

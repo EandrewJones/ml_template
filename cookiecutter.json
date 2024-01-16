@@ -6,6 +6,5 @@
   "git_repo_url": "https or ssh url to clone the project",
   "project_short_description": "Sample project .....",
   "python_major_version": 3,
-  "python_minor_version": 10,
-  "environment_name": "Conda environment name. Characters not allowed: {'/', ':', '#', ' '}"
+  "python_minor_version": 10
 }
