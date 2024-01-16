@@ -9,8 +9,9 @@ dependencies:
   - python={{cookiecutter.python_major_version}}.{{cookiecutter.python_minor_version}}
   # Python dependencies below
   # NOTE: PIN versions after instantiating the template
-  - fastapi
+  - fastapi=0.103.2
   - pydantic
   - pytorch
   - pytorch-cuda=11.8
+  - typing-extensions=4.7.1
   - uvicorn-standard
