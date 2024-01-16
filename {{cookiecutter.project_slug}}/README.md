@@ -1,4 +1,4 @@
-# template_ds_project
+# {{cookiecutter.project_name}}
 
 <p align="center">
   <a href="" rel="noopener">
